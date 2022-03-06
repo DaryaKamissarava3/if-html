@@ -45,13 +45,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #383838;
 }
 
-.section-suptitle::after {
+.section-subtitle::after {
     content: "";
     display: block;
     width: 100px;
     height: 4px;
     margin: 20px auto 30px;
-
     background-color: #F5BD41;
 }
 
@@ -69,7 +68,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 16px;
 }
 
-
 .icon-image {
     display: block;
     max-width: 100%;
@@ -84,7 +82,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     text-align: center;
     padding-top: 46px;
-
 }
 
 /*FOOTER
