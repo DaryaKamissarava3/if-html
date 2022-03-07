@@ -1,128 +1,128 @@
 @import url("./fonts.css");
 
 body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #333;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+  margin: 0;
 }
 
 .container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 15px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 /*SECTION========
  ===============*/
 .section {
-    padding: 120px 0;
+  padding: 120px 0;
 }
 
 .section-header {
-    width: 100%;
-    max-width: 306px;
-    margin: 0 auto 50px;
-    font-weight: 500;
-    text-align: center;
+  width: 100%;
+  max-width: 306px;
+  margin: 0 auto 50px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .section-suptitle {
-    font-size: 40px;
-    font-weight: 400;
-    color: #383838;
+  font-size: 40px;
+  font-weight: 400;
+  color: #383838;
 }
 
 .section-subtitle::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    margin: 20px auto 30px;
-    background-color: #F5BD41;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  margin: 20px auto 30px;
+  background-color: #F5BD41;
 }
 
 /*ICONS========
  ===============*/
 .icon {
-    margin: 80px 96px 0 96px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  margin: 80px 96px 0 96px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .icon-item {
-    width: 25%;
-    padding: 0 16px;
+  width: 25%;
+  padding: 0 16px;
 }
 
 .icon-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    padding-left: 92px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-left: 92px;
 }
 
 .icon-text {
-    width: 100%;
-    color: #383838;
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-    padding-top: 46px;
+  width: 100%;
+  color: #383838;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 46px;
 }
 
 /*FOOTER
 ======================*/
 
 .footer {
-    padding-top: 120px;
-    background-color: #10367C;
+  padding-top: 120px;
+  background-color: #10367C;
 }
 
 .footer-inner {
-    padding: 0 272px 64px 104px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 15px;
+  padding: 0 272px 64px 104px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 15px;
 }
 
 .footer_col {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .footer-title {
-    font-size: 20px;
-    font-weight: 500;
-    color: #FFFFFF;
-    margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 24px;
 }
 
 .footer-col-list-item {
-    font-size: 20px;
-    font-weight: 400;
-    color: #FFFFFF;
-    padding-bottom: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  padding-bottom: 24px;
 }
 
 .copyright {
-    padding: 0 0 120px 120px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #FFFFFF;
+  padding: 0 0 120px 120px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
 }
 
 
