@@ -43,6 +43,12 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+.header-logo {
+  width: 205px;
+  height: 40px;
+}
+
+
 /*Navigation========*/
 .nav {
   font-size: 24px;
@@ -58,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: color .2s linear;
 }
 
-.nav-link::after {
+.underline-item::after{
   content: " ";
   display: block;
   width: 100%;
@@ -72,17 +78,22 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity .2s linear;
 }
 
-.nav-link:hover {
+.underline-item:hover{
   color: #F5BD41;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
   opacity: 1;
 }
 
-.nav-link.active {
+.underline-item:hover::after,
+.underline-item.active::after{
+  opacity: 1;
+}
+
+.underline-item.active{
   color: #F5BD41;
+}
+
+svg path:hover {
+  fill: #F5BD41;
 }
 
 /*INTRO========
