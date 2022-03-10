@@ -48,15 +48,16 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 
-
 /*Navigation========*/
 .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 24px;
 }
 
 .nav-link {
-  display: inline-block;
-  vertical-align: top;
   margin: 0 24px;
   position: relative;
   color: #FFFFFF;
@@ -190,6 +191,7 @@ input::placeholder {
   text-align: center;
   margin: auto;
   padding-top: 120px;
+  padding-bottom: 40px;
 }
 
 .download-button {
