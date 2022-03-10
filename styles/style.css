@@ -20,9 +20,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1232px;
   margin: 0 auto;
-  padding: 0 15px;
+
 }
 
 /*HEADER========
@@ -65,7 +65,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: color .2s linear;
 }
 
-.underline-item::after{
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.underline-item::after {
   content: " ";
   display: block;
   width: 100%;
@@ -79,17 +83,17 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity .2s linear;
 }
 
-.underline-item:hover{
+.underline-item:hover {
   color: #F5BD41;
   opacity: 1;
 }
 
 .underline-item:hover::after,
-.underline-item.active::after{
+.underline-item.active::after {
   opacity: 1;
 }
 
-.underline-item.active{
+.underline-item.active {
   color: #F5BD41;
 }
 
@@ -108,6 +112,7 @@ svg path:hover {
   background: url("../images/intro/background.svg") center no-repeat;
   background-size: cover;
 }
+
 
 .intro-title {
   margin-top: 180px;
@@ -239,10 +244,10 @@ input::placeholder {
 /*ICONS========
  ===============*/
 .icon {
-  margin: 80px 96px 0 96px;
+  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .icon-item {
@@ -254,7 +259,7 @@ input::placeholder {
   max-width: 100%;
   height: auto;
   display: block;
-  padding-left: 92px;
+  padding-left: 84px;
 }
 
 .icon-text {
@@ -274,7 +279,7 @@ input::placeholder {
 }
 
 .footer-inner {
-  padding: 0 272px 64px 104px;
+  padding-bottom: 64px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -300,7 +305,7 @@ input::placeholder {
 }
 
 .copyright {
-  padding: 0 0 120px 120px;
+  padding-bottom: 120px;
   font-size: 14px;
   font-weight: 400;
   color: #FFFFFF;
