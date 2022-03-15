@@ -47,6 +47,16 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 
+.svg-img-night{
+  width: 30px;
+  height: 30px;
+}
+
+.svg-img-account{
+  width: 40px;
+  height: 40px;
+}
+
 /*Navigation========*/
 .nav {
   display: flex;
@@ -232,7 +242,7 @@ input::placeholder {
 
 .section-subtitle::after {
   content: "";
-  display: block;
+  display: flex;
   width: 100px;
   height: 4px;
   margin: 20px auto 30px;
@@ -258,18 +268,16 @@ input::placeholder {
 }
 
 .icon-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .icon-text {
-  width: 100%;
+  display: flex;
+  justify-content: center;
   color: #383838;
   font-size: 24px;
   font-weight: 400;
-  text-align: center;
   padding-top: 46px;
 }
 
@@ -344,8 +352,8 @@ input::placeholder {
 
   /*FOOTER*/
   .footer-small-logo {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 40px 0;
   }
 
@@ -366,7 +374,8 @@ input::placeholder {
   }
 
   .copyright {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-size: 18px;
     padding-left: 0;
     padding-bottom: 40px;
