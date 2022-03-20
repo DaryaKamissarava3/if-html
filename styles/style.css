@@ -238,15 +238,18 @@ input::placeholder {
   font-size: 40px;
   font-weight: 500;
   color: #383838;
+  position: relative;
 }
 
 .section-subtitle.underline::after {
   content: "";
-  display: flex;
   width: 100px;
   height: 4px;
-  margin: 20px auto 30px;
   background-color: #F5BD41;
+  position: absolute;
+  top: 115%;
+  left: 46%;
+  z-index: 2;
 }
 
 /*ICONS========
