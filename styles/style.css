@@ -150,12 +150,13 @@ svg path:hover {
   display: flex;
   align-items: normal;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #ac37b0;
   border-radius: 8px;
 }
 
 .searchBox-input {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   flex: 1 1 auto;
   font-size: 18px;
   font-weight: 400;
@@ -220,16 +221,16 @@ input::placeholder {
   margin-right: 16px;
 }
 
-/*SECTION========
- ===============*/
+/*SECTION-What do we offer========
+ ===============================*/
 .section {
   padding: 120px 0;
 }
 
 .section-header {
   width: 100%;
-  max-width: 306px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
+  padding-bottom: 104px;
   font-weight: 500;
   text-align: center;
 }
@@ -238,28 +239,30 @@ input::placeholder {
   font-size: 40px;
   font-weight: 500;
   color: #383838;
+  position: relative;
 }
 
-.section-subtitle::after {
+.section-subtitle.underline::after {
   content: "";
-  display: flex;
+  display: block;
   width: 100px;
   height: 4px;
-  margin: 20px auto 30px;
   background-color: #F5BD41;
+  position: absolute;
+  top: 115%;
+  left: 46%;
+  z-index: 2;
 }
 
 /*ICONS========
  ===============*/
 .icon {
-  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .icon-item {
-  /*width: 25%;*/
   display: flex;
   flex-flow: column wrap;
   padding: 0 16px;
@@ -283,6 +286,227 @@ input::placeholder {
   padding-top: 46px;
 }
 
+/*SECTION-Homes guests loves========
+ ===============================*/
+.section--blue {
+  background-color: #EAF0F9;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card-item {
+  width: 296px;
+}
+
+.card-hostel-name {
+  padding: 24px 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #3077C6;
+}
+
+.card-hostel-location {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24px;
+  font-weight: 400;
+  color: #BFBFBF;
+}
+
+.sliders-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F3F3F4;
+  box-shadow: 4px 4px 8px #8a8a8a;
+  position: absolute;
+  top: 130px;
+  right: -20px;
+}
+
+.sliders-button::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 10px;
+  border-top: 2px solid #383838;
+  border-right: 2px solid #383838;
+  border-radius: 2px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 1;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/*SECTION-The best destinations========
+ ===============================*/
+.form-of-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 652px;
+  background-color: #F3F3F4;
+  border-radius: 8px;
+  border: 0;
+}
+
+.btn-for-regions {
+  padding: 17px 52px;
+  font-size: 24px;
+  text-align: center;
+  border: 0;
+  border-radius: 8px;
+  background-color: #F3F3F4;
+}
+
+.btn-for-regions:hover {
+  background-color: #3077C6;
+  color: #FFFFFF;
+}
+
+.btn-for-regions:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+  inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/*country-cards*/
+.country-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 65px;
+}
+
+.country-img {
+  background-color: black;
+  position: relative;
+}
+
+.country-card-img {
+  max-width: 296px;
+  opacity: 1;
+  transition: opacity 124ms linear;
+  display: block;
+}
+
+.country-name {
+  padding-top: 24px;
+  font-size: 24px;
+  color: #3077C6;
+}
+
+.card-btn {
+  font-size: 18px;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: opacity .2s linear;
+}
+
+.btn {
+  width: 128px;
+  height: 48px;
+  font-weight: 400;
+  font-size: 18px;
+  border: 1px solid #3077C6;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #3077C6;
+}
+
+.country-card-item:hover .card-btn {
+  opacity: 1;
+}
+
+.country-card-img:hover {
+  opacity: 0.7;
+}
+
+/*SIGN-UP
+======================*/
+.section.sign-up {
+  padding: 30px 0;
+}
+
+.container.sign-up {
+  position: relative;
+}
+
+.sign-up-block {
+  background-color: #EAF0F9;
+}
+
+.sign-up-block-inner {
+  padding: 52px 0 52px 28px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner-item-1 {
+  width: 10%;
+  max-height: 58px;
+}
+
+.inner-item-2 {
+  width: 90%;
+}
+
+.sign-up-text {
+  padding-bottom: 21px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sign-up-button:hover {
+  background-color: #3077C6;
+  color: #FFFFFF;
+}
+
+/*CROSS*/
+.sign-up-cross {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity ease 0.5s;
+}
+
+.sign-up-cross:hover {
+  opacity: 1;
+}
+
+
+.sign-up-cross::before,
+.sign-up-cross::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #000;
+}
+
+.sign-up-cross::before {
+  transform: rotate(45deg);
+}
+
+.sign-up-cross::after {
+  transform: rotate(-45deg);
+}
+
 /*FOOTER
 ======================*/
 .footer {
@@ -293,7 +517,7 @@ input::placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 120px 272px 50px 104px;
+  padding: 120px 272px 50px 0px;
 }
 
 .footer_col {
@@ -315,7 +539,7 @@ input::placeholder {
 }
 
 .copyright {
-  padding-left: 104px;
+  padding-left: 0px;
   padding-bottom: 120px;
   font-size: 14px;
   font-weight: 400;
@@ -329,14 +553,75 @@ input::placeholder {
 /*===============
 =====MEDIA========
  ===============*/
+@media only screen and (max-width: 1261px) {
+  /*INTRO*/
+  .intro-inner {
+    margin: 0 5%;
+  }
+
+  .form-of-buttons {
+    margin-left: 30px;
+  }
+
+  /*CARD*/
+  .card {
+    justify-content: center;
+  }
+
+  .card-item {
+    width: 22%;
+    padding-right: 20px;
+  }
+
+  .card-img {
+    width: 100%;
+  }
+
+  .card-hostel-name {
+    padding: 12px 0;
+    font-size: 18px;
+  }
+
+  .card-hostel-location {
+    font-size: 18px;
+  }
+
+  /*COUNTRY-CARD*/
+  .country-cards {
+    justify-content: space-around;
+    margin: 0 15px;
+  }
+
+  .country-card-item {
+    width: 22%;
+  }
+
+  .country-card-img {
+    width: 100%;
+  }
+
+  .country-name {
+    padding-top: 16px;
+  }
+
+  /*FOOTER*/
+  .footer-inner {
+    padding: 90px 50px 40px 100px;
+  }
+
+  .copyright {
+    padding-left: 100px;
+  }
+}
+
 @media only screen and (max-width: 930px) {
   /* For desktop: */
   .col-1 {
-    width: 8.33336%;
+    width: 8.3%;
   }
 
   .col-2 {
-    width: 16.6667%;
+    width: 16.67%;
   }
 
   .col-3 {
@@ -344,11 +629,11 @@ input::placeholder {
   }
 
   .col-4 {
-    width: 33.33344%;
+    width: 33.3%;
   }
 
   .col-5 {
-    width: 41.6668%;
+    width: 41.67%;
   }
 
   .col-6 {
@@ -356,11 +641,11 @@ input::placeholder {
   }
 
   .col-7 {
-    width: 58.33352%;
+    width: 58.3%;
   }
 
   .col-8 {
-    width: 66.66688%;
+    width: 66.67%;
   }
 
   .col-9 {
@@ -368,15 +653,24 @@ input::placeholder {
   }
 
   .col-10 {
-    width: 83.3336%;
+    width: 83.3%;
   }
 
   .col-11 {
-    width: 91.66696%;
+    width: 91.67%;
   }
 
   .col-12 {
     width: 100%;
+  }
+
+  /*SECTION*/
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-header {
+    padding-bottom: 80px;
   }
 
   /*ICON*/
@@ -387,16 +681,110 @@ input::placeholder {
   .icon-item {
     padding: 40px 0;
   }
+
+  /*SECTION-2*/
+  /*CARD*/
+  .card {
+    justify-content: space-evenly;
+  }
+
+  .card-hostel-name {
+    padding: 15px 0;
+    font-size: 20px;
+  }
+
+  .card-hostel-location {
+    font-size: 20px;
+  }
+
+  .card-item.desktop-close {
+    display: none;
+  }
+
+  .sliders-button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #F3F3F4;
+    box-shadow: 2px 2px 8px #8a8a8a;
+    position: absolute;
+    top: 55px;
+    right: 19px;
+  }
+
+  .sliders-button::after {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #383838;
+    border-right: 2px solid #383838;
+    border-radius: 2px;
+    position: absolute;
+    top: 15px;
+    right: 11px;
+    z-index: 1;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  /*SECTION-3*/
+  /*Country-cards*/
+  .country-cards {
+    padding-bottom: 40px;
+  }
+
+  .country-name {
+    padding-top: 16px;
+    font-size: 18px;
+  }
+
+  .form-of-buttons {
+    margin: 0 20px;
+    max-width: 500px;
+    background-color: #F3F3F4;
+    border-radius: 8px;
+    border: 0;
+  }
+
+  .btn-for-regions {
+    padding: 13px 35px;
+    font-size: 20px;
+  }
+
+  .country-name {
+    padding-top: 16px;
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 90px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /*FOOTER*/
+  .footer-inner {
+    padding: 90px 10px 50px 80px;
+  }
+
+  .footer-col:first-of-type {
+    padding-right: 20px;
+  }
+
+  .copyright {
+    padding-left: 80px;
+    padding-bottom: 100px;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 635px) {
   /* For tablets: */
   .col-s-1 {
-    width: 8.33336%;
+    width: 8.3%;
   }
 
   .col-s-2 {
-    width: 16.6667%;
+    width: 16.67%;
   }
 
   .col-s-3 {
@@ -404,11 +792,11 @@ input::placeholder {
   }
 
   .col-s-4 {
-    width: 33.33344%;
+    width: 33.3%;
   }
 
   .col-s-5 {
-    width: 41.6668%;
+    width: 41.67%;
   }
 
   .col-s-6 {
@@ -416,11 +804,11 @@ input::placeholder {
   }
 
   .col-s-7 {
-    width: 58.33352%;
+    width: 58.3%;
   }
 
   .col-s-8 {
-    width: 66.66688%;
+    width: 66.67%;
   }
 
   .col-s-9 {
@@ -428,15 +816,58 @@ input::placeholder {
   }
 
   .col-s-10 {
-    width: 83.3336%;
+    width: 83.3%;
   }
 
   .col-s-11 {
-    width: 91.66696%;
+    width: 91.7%;
   }
 
   .col-s-12 {
     width: 100%;
+  }
+
+  /*NAVIGATION*/
+  .nav-link.underline-item {
+    display: none;
+  }
+
+  /*INTRO*/
+  .intro-title {
+    font-size: 30px;
+    margin-top: 40px;
+    padding-bottom: 31px;
+  }
+
+  .searchBox-group-labels {
+    display: none;
+  }
+
+  .searchBox-group-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F5BD41;
+    width: 328px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .searchBox-input {
+    width: 312px;
+    height: 48px;
+    flex: none;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
+  .download-buttons {
+    padding-top: 40px;
+  }
+
+  .download-button {
+    width: 135px;
+    height: 40px;
   }
 
   /*SECTION*/
@@ -445,25 +876,76 @@ input::placeholder {
   }
 
   .section-header {
-    margin-top: 24px;
     margin-bottom: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-size: 28px;
     font-weight: 500;
     text-align: center;
   }
 
-  .section-subtitle::after {
+  .section-subtitle.underline::after {
     display: none;
   }
 
   /*ICON*/
   .icon {
-    margin-top: 32px;
+    margin-top: 0;
     margin-bottom: 8px;
   }
 
   .icon-item {
+    padding-top: 0;
     padding-bottom: 32px;
+  }
+
+  /*CARD*/
+  .card-hostel-name {
+    font-size: 14px;
+    padding: 8px 0 4px 0;
+  }
+
+  .card-hostel-location {
+    font-size: 14px;
+    padding-bottom: 40px;
+  }
+
+  /*SECTION-3*/
+  /*COUNTRY-CARD*/
+  .form-of-buttons {
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+
+  .btn-for-regions {
+    width: 100px;
+    height: 36px;
+    margin-right: 16px;
+    padding: 5px 15px;
+    font-size: 19px;
+    background-color: #FFFFFF;
+    border: 1px solid #F3F3F4;
+  }
+
+  .country-card-item.desktop-close {
+    display: none;
+  }
+
+  .country-name {
+    padding-top: 8px;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  span {
+    display: none;
+  }
+
+  /*SIGN-UP*/
+  .section.sign-up {
+    display: none;
   }
 
   /*FOOTER*/
@@ -498,6 +980,7 @@ input::placeholder {
     padding-bottom: 40px;
   }
 }
+
 
 
 
