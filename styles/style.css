@@ -296,11 +296,14 @@ input::placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: relative;
 }
 
 .card-item {
   width: 296px;
+}
+
+.card-img-container {
+  position: relative;
 }
 
 .card-hostel-name {
@@ -325,8 +328,9 @@ input::placeholder {
   background-color: #F3F3F4;
   box-shadow: 4px 4px 8px #8a8a8a;
   position: absolute;
-  top: 130px;
-  right: -20px;
+  top: 50%;
+  right: -13%;
+  transform: translate(-50%, -50%);
 }
 
 .sliders-button::after {
@@ -344,6 +348,184 @@ input::placeholder {
   transform: translateY(-50%) rotate(45deg);
 }
 
+.sliders-button.tablets-show {
+  display: none;
+}
+
+/*SECTION-The best destinations========
+ ===============================*/
+.form-of-buttons {
+  max-width: 652px;
+  display: flex;
+  background-color: #F3F3F4;
+  border-radius: 8px;
+  border: 0;
+}
+
+.btn-for-regions {
+  padding: 17px 52px;
+  font-size: 24px;
+  text-align: center;
+  border: 0;
+  border-radius: 8px;
+  background-color: #F3F3F4;
+}
+
+.active, .btn-for-regions:hover {
+  background-color: #3077C6;
+  color: #FFFFFF;
+}
+
+.btn-for-regions:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+  inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/*country-cards*/
+.country-cards {
+  padding-top: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.country-img {
+  position: relative;
+  background-color: black;
+}
+
+.country-card-img {
+  max-width: 296px;
+  display: block;
+  opacity: 1;
+  transition: opacity 124ms linear;
+}
+
+.country-name {
+  padding-top: 24px;
+  font-size: 24px;
+  color: #3077C6;
+}
+
+.card-btn {
+  font-size: 18px;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  transition: opacity .2s linear;
+}
+
+.btn {
+  width: 128px;
+  height: 48px;
+  font-weight: 400;
+  font-size: 18px;
+  border: 1px solid #3077C6;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #3077C6;
+}
+
+.country-card-item:hover .card-btn {
+  opacity: 1;
+}
+
+.country-card-img:hover {
+  opacity: 0.7;
+}
+
+.sliders-button.card {
+  position: absolute;
+  box-shadow: 2px 2px 8px #8a8a8a;
+  top: 110%;
+  right: 49%;
+}
+
+.sliders-button.card::after {
+  transform: translateY(-50%) rotate(135deg);
+}
+
+/*SIGN-UP
+======================*/
+.section.sign-up {
+  padding: 30px 0;
+}
+
+.container.sign-up {
+  position: relative;
+}
+
+.sign-up-block {
+  background-color: #EAF0F9;
+}
+
+.sign-up-block-inner {
+  padding: 52px 0 52px 28px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner-item-1 {
+  width: 10%;
+  max-height: 58px;
+}
+
+.inner-item-2 {
+  width: 90%;
+}
+
+.sign-up-text {
+  padding-bottom: 21px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sign-up-button:hover {
+  background-color: #3077C6;
+  color: #FFFFFF;
+}
+
+/*CROSS*/
+.sign-up-cross {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity ease 0.5s;
+}
+
+.sign-up-cross:hover {
+  opacity: 1;
+}
+
+
+.sign-up-cross::before,
+.sign-up-cross::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #000;
+}
+
+.sign-up-cross::before {
+  transform: rotate(45deg);
+}
+
+.sign-up-cross::after {
+  transform: rotate(-45deg);
+}
+
 /*FOOTER
 ======================*/
 .footer {
@@ -354,7 +536,7 @@ input::placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 120px 272px 50px 104px;
+  padding: 120px 272px 50px 0;
 }
 
 .footer_col {
@@ -376,7 +558,7 @@ input::placeholder {
 }
 
 .copyright {
-  padding-left: 104px;
+  padding-left: 0;
   padding-bottom: 120px;
   font-size: 14px;
   font-weight: 400;
@@ -394,6 +576,10 @@ input::placeholder {
   /*INTRO*/
   .intro-inner {
     margin: 0 5%;
+  }
+
+  .form-of-buttons {
+    margin-left: 30px;
   }
 
   /*CARD*/
@@ -419,9 +605,31 @@ input::placeholder {
     font-size: 18px;
   }
 
+  /*COUNTRY-CARD*/
+  .country-cards {
+    justify-content: space-around;
+    margin: 0 15px;
+  }
+
+  .country-card-item {
+    width: 22%;
+  }
+
+  .country-card-img {
+    width: 100%;
+  }
+
+  .country-name {
+    padding-top: 16px;
+  }
+
   /*FOOTER*/
   .footer-inner {
     padding: 90px 50px 40px 100px;
+  }
+
+  .copyright {
+    padding-left: 100px;
   }
 }
 
@@ -518,9 +726,6 @@ input::placeholder {
     border-radius: 50%;
     background-color: #F3F3F4;
     box-shadow: 2px 2px 8px #8a8a8a;
-    position: absolute;
-    top: 55px;
-    right: 19px;
   }
 
   .sliders-button::after {
@@ -536,6 +741,41 @@ input::placeholder {
     right: 11px;
     z-index: 1;
     transform: translateY(-50%) rotate(45deg);
+  }
+
+  /*SECTION-3*/
+  /*Country-cards*/
+  .country-cards {
+    padding-bottom: 40px;
+  }
+
+  .country-name {
+    padding-top: 16px;
+    font-size: 18px;
+  }
+
+  .form-of-buttons {
+    margin: 0 20px;
+    max-width: 500px;
+    background-color: #F3F3F4;
+    border-radius: 8px;
+    border: 0;
+  }
+
+  .btn-for-regions {
+    padding: 13px 35px;
+    font-size: 20px;
+  }
+
+  .country-name {
+    padding-top: 16px;
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 90px;
+    height: 32px;
+    font-size: 14px;
   }
 
   /*FOOTER*/
@@ -655,9 +895,12 @@ input::placeholder {
     margin-bottom: 0;
     padding-top: 32px;
     padding-bottom: 32px;
-    font-size: 28px;
     font-weight: 500;
     text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 28px;
   }
 
   .section-subtitle.underline::after {
@@ -684,6 +927,60 @@ input::placeholder {
   .card-hostel-location {
     font-size: 14px;
     padding-bottom: 40px;
+  }
+
+  .sliders-button {
+    right: -20%;
+  }
+
+  .sliders-button.tablets-show {
+    display: block;
+  }
+
+  /*SECTION-3*/
+  /*COUNTRY-CARD*/
+  .form-of-buttons {
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+
+  .btn-for-regions {
+    width: 100px;
+    height: 36px;
+    margin-right: 16px;
+    padding: 5px 15px;
+    font-size: 19px;
+    background-color: #FFFFFF;
+    border: 1px solid #F3F3F4;
+  }
+
+  .btn-for-regions.active {
+    background-color: #3077C6;
+  }
+
+  .country-card-item.desktop-close {
+    display: none;
+  }
+
+  .country-name {
+    padding-top: 8px;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  span {
+    display: none;
+  }
+
+  .sliders-button.tablets-close {
+    display: none;
+  }
+
+  /*SIGN-UP*/
+  .section.sign-up {
+    display: none;
   }
 
   /*FOOTER*/
@@ -718,6 +1015,7 @@ input::placeholder {
     padding-bottom: 40px;
   }
 }
+
 
 
 
