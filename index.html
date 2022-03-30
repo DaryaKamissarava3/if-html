@@ -15,8 +15,8 @@
         <img class="header-logo-img" src="images/intro/logo.svg" alt="It is the logo of site">
       </div>
       <nav class="nav">
-        <a class="nav-link underline-item col-1 " href="#">Stays</a>
-        <a class="nav-link underline-item col-1" href="#">Attractions</a>
+        <a class="nav-link underline-item col-2 " href="#">Stays</a>
+        <a class="nav-link underline-item col-4" href="#">Attractions</a>
         <a class="nav-link col-2 col-s-3" href="#">
           <svg class="svg-img-night" width="30" height="30" viewBox="0 0 30 30" fill="none"
                xmlns="http://www.w3.org/2000/svg">
@@ -44,39 +44,34 @@
   <div class="container">
     <div class="intro-inner">
       <h1 class="intro-title">Discover stays<br> to live, work or just relax</h1>
-      <div class="searchBox-group">
-        <div class="searchBox-group-labels">
-          <div class="searchBox-label">Your destination or hotel name</div>
-          <div class="searchBox-label">Check-in — Check-out</div>
-        </div>
-        <form class="searchBox-group-inputs ">
-          <label class="label-1 small-display" for="destination">
-            <svg class="search-lup small-display" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path
-                  d="M11.4351 10.0629H10.7124L10.4563 9.81589C11.3528 8.77301 11.8925 7.4191 11.8925 5.94625C11.8925 2.66209 9.23042 0 5.94625 0C2.66209 0 0 2.66209 0 5.94625C0 9.23042 2.66209 11.8925 5.94625 11.8925C7.4191 11.8925 8.77301 11.3528 9.81589 10.4563L10.0629 10.7124V11.4351L14.6369 16L16 14.6369L11.4351 10.0629ZM5.94625 10.0629C3.66838 10.0629 1.82962 8.22413 1.82962 5.94625C1.82962 3.66838 3.66838 1.82962 5.94625 1.82962C8.22413 1.82962 10.0629 3.66838 10.0629 5.94625C10.0629 8.22413 8.22413 10.0629 5.94625 10.0629Z"
-                  fill="#BFBFBF"/>
-            </svg>
-            Your destination or hotel name</label>
-          <input class="searchBox-input first-input col-5 col-s-11" type="text" id="destination" name="destination"
-                 placeholder="New York">
-          <label class="label-2-1-1 second small-display" for="check-in">Check-in date</label>
-          <label class="label-2-2-1 second small-display" for="check-in">Tue 15 Sept 2020</label>
-          <input class="searchBox-input second-input col-2 col-s-4" type="text" id="check-in" name="check-out"
-                 placeholder="Tue 15 Sept — Sat 19 Sept">
-          <div class="input-container-3">
-            <label class="label-2-1-2 second small-display" for="check-out">Check-out date</label>
-            <label class="label-2-2-2 second small-display" for="check-in">Sat 19 Sept 2020</label>
-            <input class="searchBox-input second-input small-display col-2 col-s-4" type="text" id="check-out"
-                   name="check-out"
-                   placeholder="Sat 19 Sept 2020">
+      <article class="container--form col-md-12 col-lg-12 col-12">
+        <form action="/" method="post">
+          <div class="row--form">
+            <div class="input--place--wrap">
+              <input type="text" name="place" class="col--place col-md-12 col-lg-12 col-12" required/>
+              <label class="label--place">Your destination or hotel name</label>
+            </div>
+
+            <div class="input--date--wrap">
+              <div class="label--date--wrap-first">
+                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                       class="col--date col-md-12 col-lg-12 col-12" required/>
+                <label class="label--date--first">Check-in</label>
+              </div>
+              <div class="label--date--wrap-second">
+                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                       class="col--date col-md-12 col-lg-12 col-12" required/>
+                <label class="label--date--second">Check-out</label>
+              </div>
+            </div>
+
+            <input type="text" name="guests" class="col--guests col-md-12 col-lg-12 col-12" required/>
+            <label class="label--guests">2 Adults &#8212; 0 Children &#8212; 1 Room</label>
+
+            <button class="col--button button__text col-md-12 col-md-12 col-12"> Search</button>
           </div>
-          <input class="searchBox-input third-input col-3 col-s-11" type="text" id="choose-adults-children-room"
-                 name="choose-adults-children-room"
-                 placeholder="2 Adults — 0 Children — 1 Room">
-          <button class="searchBox-button col-2 col-s-11" type="submit">Search</button>
         </form>
-      </div><!-- /.searchBox-group-->
+      </article>
       <div class="download-buttons">
         <button class=" download-button google-play-button"><img src="images/intro/google-play.svg"
                                                                  alt="google-play img"></button>
@@ -197,8 +192,9 @@
     </div>
     <div class="form-of-buttons">
       <button class="btn-for-regions active col-s-1" type="button">Regions</button>
-      <button class="btn-for-regions col-s-1" type="button">Cities</button>
-      <button class="btn-for-regions col-s-1" type="button">Places <span>of interest</span></button>
+      <button class="btn-for-regions  col-s-1" type="button">Cities</button>
+      <button class="btn-for-regions col-s-1" type="button">Places <span class="text-of-button">of interest</span>
+      </button>
     </div>
     <div class="country-cards">
       <div class="country-card-item desktop-show col-s-5">
@@ -285,124 +281,128 @@
       <h2 class="section-subtitle">Guests reviews</h2>
     </div>
     <div class="reviews">
-      <div class="reviews-item col-s-12">
-        <div class="item-img-container">
-          <img class="reviews-img" src="images/guests-reviews/ubudBaliResortSPA.png"
-               alt="The photo of Ubud Bali Resort&SPA">
-          <div class="price">From 250 USD</div>
-        </div>
-        <div class="item-inf-container">
-          <div class="item-inf-container-1">
-            <div class="resting-place">Ubud Bali Resort&SPA</div>
-            <div class="grade">
-              <div class="grade-container">
-                9,4
+
+        <div class="reviews-item col-s-12">
+          <div class="item-img-container">
+            <img class="reviews-img" src="images/guests-reviews/ubudBaliResortSPA.png"
+                 alt="The photo of Ubud Bali Resort&SPA">
+            <div class="price">From 250 USD</div>
+          </div>
+          <div class="item-inf-container">
+            <div class="item-inf-container-1">
+              <div class="resting-place">Ubud Bali Resort&SPA</div>
+              <div class="grade">
+                <div class="grade-container">
+                  9,4
+                </div>
+              </div>
+              <div class="location">Bali, Indonesia</div>
+              <div class="number-of-reviews">1324 reviews</div>
+            </div>
+            <div class="item-inf-container-2">
+              <div class="item-inf-icon">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M27 0.333374C12.28 0.333374 0.333328 12.28 0.333328 27C0.333328 41.72 12.28 53.6667 27 53.6667C41.72 53.6667 53.6667 41.72 53.6667 27C53.6667 12.28 41.72 0.333374 27 0.333374ZM27 8.33337C31.4267 8.33337 35 11.9067 35 16.3334C35 20.76 31.4267 24.3334 27 24.3334C22.5733 24.3334 19 20.76 19 16.3334C19 11.9067 22.5733 8.33337 27 8.33337ZM27 46.2C20.3333 46.2 14.44 42.7867 11 37.6134C11.08 32.3067 21.6667 29.4 27 29.4C32.3067 29.4 42.92 32.3067 43 37.6134C39.56 42.7867 33.6667 46.2 27 46.2Z"
+                      fill="#BFBFBF"/>
+                </svg>
+              </div>
+              <div class="item-inf-author">
+                <div class="author-name">Hanna Ivanova</div>
+                <div class="country">
+                  <img src="images/guests-reviews/flagUkraine.png" alt="Ukraine flag"> Ukraine
+                </div>
               </div>
             </div>
-            <div class="location">Bali, Indonesia</div>
-            <div class="number-of-reviews">1324 reviews</div>
-          </div>
-          <div class="item-inf-container-2">
-            <div class="item-inf-icon">
-              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M27 0.333374C12.28 0.333374 0.333328 12.28 0.333328 27C0.333328 41.72 12.28 53.6667 27 53.6667C41.72 53.6667 53.6667 41.72 53.6667 27C53.6667 12.28 41.72 0.333374 27 0.333374ZM27 8.33337C31.4267 8.33337 35 11.9067 35 16.3334C35 20.76 31.4267 24.3334 27 24.3334C22.5733 24.3334 19 20.76 19 16.3334C19 11.9067 22.5733 8.33337 27 8.33337ZM27 46.2C20.3333 46.2 14.44 42.7867 11 37.6134C11.08 32.3067 21.6667 29.4 27 29.4C32.3067 29.4 42.92 32.3067 43 37.6134C39.56 42.7867 33.6667 46.2 27 46.2Z"
-                    fill="#BFBFBF"/>
-              </svg>
+            <div class="reviews-text">Great location, really pleasant and clean rooms, but the thing that makes this
+              such
+              a
+              good place to stay
+              are the staff. All of the people are incredibly helpful and generous with their time and advice.
             </div>
-            <div class="item-inf-author">
-              <div class="author-name">Hanna Ivanova</div>
-              <div class="country">
-                <img src="images/guests-reviews/flagUkraine.png" alt="Ukraine flag"> Ukraine
+          </div>
+        </div><!-- /.reviews-item-->
+        <div class="reviews-item tablets-close col-s-12">
+          <div class="item-img-container">
+            <img class="reviews-img" src="images/guests-reviews/kingKongHostel.png" alt="The photo of King Kong Hostel">
+            <div class="price">From 40 USD</div>
+          </div>
+          <div class="item-inf-container">
+            <div class="item-inf-container-1">
+              <div class="resting-place">King Kong Hostel</div>
+              <div class="grade">
+                <div class="grade-container">
+                  8,9
+                </div>
+              </div>
+              <div class="location">Rotterdam, Netherlands</div>
+              <div class="number-of-reviews">2016 reviews</div>
+            </div>
+            <div class="item-inf-container-2">
+              <div class="item-inf-icon">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M27 0.333374C12.28 0.333374 0.333328 12.28 0.333328 27C0.333328 41.72 12.28 53.6667 27 53.6667C41.72 53.6667 53.6667 41.72 53.6667 27C53.6667 12.28 41.72 0.333374 27 0.333374ZM27 8.33337C31.4267 8.33337 35 11.9067 35 16.3334C35 20.76 31.4267 24.3334 27 24.3334C22.5733 24.3334 19 20.76 19 16.3334C19 11.9067 22.5733 8.33337 27 8.33337ZM27 46.2C20.3333 46.2 14.44 42.7867 11 37.6134C11.08 32.3067 21.6667 29.4 27 29.4C32.3067 29.4 42.92 32.3067 43 37.6134C39.56 42.7867 33.6667 46.2 27 46.2Z"
+                      fill="#BFBFBF"/>
+                </svg>
+              </div>
+              <div class="item-inf-author">
+                <div class="author-name">Adam Smith</div>
+                <div class="country">
+                  <img src="images/guests-reviews/flagUSA.png" alt="USA flag"> USA
+                </div>
               </div>
             </div>
+            <div class="reviews-text">
+              I've been in this hostel for a month and here is the best hostel of all Excellent management of excellent
+              and
+              ethical staff and bedrooms Bathrooms are always clean and excellent Most importantly, those who work here
+              are
+              kind and good-natured.
+            </div>
           </div>
-          <div class="reviews-text">Great location, really pleasant and clean rooms, but the thing that makes this such
-            a
-            good place to stay
-            are the staff. All of the people are incredibly helpful and generous with their time and advice.
+        </div><!-- /.reviews-item-->
+        <div class="reviews-item third-item tablets-close col-s-12">
+          <div class="item-img-container">
+            <img class="reviews-img" src="images/guests-reviews/rokokoHotel.png" alt="The photo of Rokoko Hotel">
+            <div class="price">From 100 USD</div>
+            <div class="sliders-button for-reviews"></div>
           </div>
-        </div>
-      </div><!-- /.reviews-item-->
-      <div class="reviews-item tablets-close col-s-12">
-        <div class="item-img-container">
-          <img class="reviews-img" src="images/guests-reviews/kingKongHostel.png" alt="The photo of King Kong Hostel">
-          <div class="price">From 40 USD</div>
-        </div>
-        <div class="item-inf-container">
-          <div class="item-inf-container-1">
-            <div class="resting-place">King Kong Hostel</div>
-            <div class="grade">
-              <div class="grade-container">
-                8,9
+          <div class="item-inf-container">
+            <div class="item-inf-container-1">
+              <div class="resting-place">Rokoko Hotel</div>
+              <div class="grade">
+                <div class="grade-container">
+                  9,1
+                </div>
+              </div>
+              <div class="location">Ourika, Marocco</div>
+              <div class="number-of-reviews">815 reviews</div>
+            </div>
+            <div class="item-inf-container-2">
+              <div class="item-inf-icon">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M27 0.333374C12.28 0.333374 0.333328 12.28 0.333328 27C0.333328 41.72 12.28 53.6667 27 53.6667C41.72 53.6667 53.6667 41.72 53.6667 27C53.6667 12.28 41.72 0.333374 27 0.333374ZM27 8.33337C31.4267 8.33337 35 11.9067 35 16.3334C35 20.76 31.4267 24.3334 27 24.3334C22.5733 24.3334 19 20.76 19 16.3334C19 11.9067 22.5733 8.33337 27 8.33337ZM27 46.2C20.3333 46.2 14.44 42.7867 11 37.6134C11.08 32.3067 21.6667 29.4 27 29.4C32.3067 29.4 42.92 32.3067 43 37.6134C39.56 42.7867 33.6667 46.2 27 46.2Z"
+                      fill="#BFBFBF"/>
+                </svg>
+              </div>
+              <div class="item-inf-author">
+                <div class="author-name">Anika Messer</div>
+                <div class="country">
+                  <img src="images/guests-reviews/flagGermany.png" alt="Germany flag"> Germany
+                </div>
               </div>
             </div>
-            <div class="location">Rotterdam, Netherlands</div>
-            <div class="number-of-reviews">2016 reviews</div>
-          </div>
-          <div class="item-inf-container-2">
-            <div class="item-inf-icon">
-              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M27 0.333374C12.28 0.333374 0.333328 12.28 0.333328 27C0.333328 41.72 12.28 53.6667 27 53.6667C41.72 53.6667 53.6667 41.72 53.6667 27C53.6667 12.28 41.72 0.333374 27 0.333374ZM27 8.33337C31.4267 8.33337 35 11.9067 35 16.3334C35 20.76 31.4267 24.3334 27 24.3334C22.5733 24.3334 19 20.76 19 16.3334C19 11.9067 22.5733 8.33337 27 8.33337ZM27 46.2C20.3333 46.2 14.44 42.7867 11 37.6134C11.08 32.3067 21.6667 29.4 27 29.4C32.3067 29.4 42.92 32.3067 43 37.6134C39.56 42.7867 33.6667 46.2 27 46.2Z"
-                    fill="#BFBFBF"/>
-              </svg>
-            </div>
-            <div class="item-inf-author">
-              <div class="author-name">Adam Smith</div>
-              <div class="country">
-                <img src="images/guests-reviews/flagUSA.png" alt="USA flag"> USA
-              </div>
+            <div class="reviews-text">
+              Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy
+              access
+              to all the surrounding historical sites. Staff is fantastic. Will definitely stay at this location during
+              my
+              next stay in Marocco.
             </div>
           </div>
-          <div class="reviews-text">
-            I've been in this hostel for a month and here is the best hostel of all Excellent management of excellent
-            and
-            ethical staff and bedrooms Bathrooms are always clean and excellent Most importantly, those who work here
-            are
-            kind and good-natured.
-          </div>
-        </div>
-      </div><!-- /.reviews-item-->
-      <div class="reviews-item tablets-close col-s-12">
-        <div class="item-img-container">
-          <img class="reviews-img" src="images/guests-reviews/rokokoHotel.png" alt="The photo of Rokoko Hotel">
-          <div class="price">From 100 USD</div>
-          <div class="sliders-button for-reviews"></div>
-        </div>
-        <div class="item-inf-container">
-          <div class="item-inf-container-1">
-            <div class="resting-place">Rokoko Hotel</div>
-            <div class="grade">
-              <div class="grade-container">
-                9,1
-              </div>
-            </div>
-            <div class="location">Ourika, Marocco</div>
-            <div class="number-of-reviews">815 reviews</div>
-          </div>
-          <div class="item-inf-container-2">
-            <div class="item-inf-icon">
-              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M27 0.333374C12.28 0.333374 0.333328 12.28 0.333328 27C0.333328 41.72 12.28 53.6667 27 53.6667C41.72 53.6667 53.6667 41.72 53.6667 27C53.6667 12.28 41.72 0.333374 27 0.333374ZM27 8.33337C31.4267 8.33337 35 11.9067 35 16.3334C35 20.76 31.4267 24.3334 27 24.3334C22.5733 24.3334 19 20.76 19 16.3334C19 11.9067 22.5733 8.33337 27 8.33337ZM27 46.2C20.3333 46.2 14.44 42.7867 11 37.6134C11.08 32.3067 21.6667 29.4 27 29.4C32.3067 29.4 42.92 32.3067 43 37.6134C39.56 42.7867 33.6667 46.2 27 46.2Z"
-                    fill="#BFBFBF"/>
-              </svg>
-            </div>
-            <div class="item-inf-author">
-              <div class="author-name">Anika Messer</div>
-              <div class="country">
-                <img src="images/guests-reviews/flagGermany.png" alt="Germany flag"> Germany
-              </div>
-            </div>
-          </div>
-          <div class="reviews-text">
-            Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy access
-            to all the surrounding historical sites. Staff is fantastic. Will definitely stay at this location during my
-            next stay in Marocco.
-          </div>
-        </div>
-      </div><!-- /.reviews-item-->
+        </div><!-- /.reviews-item-->
     </div><!-- /.reviews-->
   </div><!-- /.container-->
 </section><!-- /.section-->
