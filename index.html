@@ -70,31 +70,30 @@
   <div class="container">
     <div class="intro-inner">
       <h1 class="intro-title">Discover stays<br> to live, work or just relax</h1>
-      <article class="container--form col-md-12 col-lg-12 col-12">
+      <article class="form-container col-lg-12 col-12">
         <form action="/" method="post">
-          <div class="row--form">
-            <div class="input--place--wrap">
-              <input type="text" name="place" class="col--place col-md-12 col-lg-12 col-12" required/>
-              <label class="label--place">Your destination or hotel name</label>
+          <div class="row-form">
+            <div class="input-destination">
+              <input id="destination" type="text" name="place" class="col-destination col-lg-12  col-12" required/>
+              <label class="label-destination" for="destination">Your destination or hotel name</label>
+            </div>
+            <div class="input-date-check">
+              <div class="label-date-first">
+                <input id="check-in" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                       class="col-date col-lg-12 col-12" required/>
+                <label class="label-date" for="check-in">Check-in</label>
+              </div>
+              <div class="label-date-second">
+                <input id="check-out" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                       class="col-date col-lg-12 col-12" required/>
+                <label class="label-date" for="check-out">Check-out</label>
+              </div>
             </div>
 
-            <div class="input--date--wrap">
-              <div class="label--date--wrap-first">
-                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                       class="col--date col-md-12 col-lg-12 col-12" required/>
-                <label class="label--date--first">Check-in</label>
-              </div>
-              <div class="label--date--wrap-second">
-                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                       class="col--date col-md-12 col-lg-12 col-12" required/>
-                <label class="label--date--second">Check-out</label>
-              </div>
-            </div>
+            <input id="count-guests" type="text" name="guests" class="col-guests col-lg-12 col-12" required/>
+            <label class="label-guests" for="count-guests">2 Adults &#8212; 0 Children &#8212; 1 Room</label>
 
-            <input type="text" name="guests" class="col--guests col-md-12 col-lg-12 col-12" required/>
-            <label class="label--guests">2 Adults &#8212; 0 Children &#8212; 1 Room</label>
-
-            <button class="col--button button__text col-md-12 col-md-12 col-12"> Search</button>
+            <button class="col-button button-text col-lg-12  col-12"> Search</button>
           </div>
         </form>
       </article>
